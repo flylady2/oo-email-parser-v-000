@@ -1,12 +1,13 @@
 class EmailParser
-  attr_accessor
-  EmailParser = []
+  attr_accessor :emails
+  
 
-  def initialize(email_string)
+  def initialize(emails)
+    @emails = emails
   end
 
-  def parse(email_string)
-    email_string.split(/[\ \,]/).uniq
+  def parse(emails)
+    emails.split(/[\ \,]/).uniq
   end
 end
 
